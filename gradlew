@@ -1,9 +1,0 @@
-#!/bin/sh
-# Gradle wrapper script
-
-##############################################################################
-##  This script is part of the Gradle Wrapper and should not be modified.  ##
-##############################################################################
-
-DIR="$(cd "$(dirname "$0")" && pwd)"
-exec "$DIR/gradle/wrapper/gradle-wrapper.jar" "$@"
