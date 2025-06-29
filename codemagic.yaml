@@ -3,10 +3,10 @@ workflows:
     name: Build Debug APK
     max_build_duration: 15
     environment:
-      android:
-        sdk: 34
+      vars:
+        JAVA_HOME: /opt/android-studio/jre
     scripts:
-      - echo "📦 Building Debug APK..."
+      - echo "📦 Starting APK Build..."
       - chmod +x ./gradlew
       - ./gradlew assembleDebug
     artifacts:
