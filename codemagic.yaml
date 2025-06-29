@@ -1,16 +1,13 @@
 workflows:
   android-build:
-    name: Build Android APK
+    name: Build Debug APK
     max_build_duration: 15
     environment:
-      vars:
-        PACKAGE_NAME: "com.tracknsave.app"
-      android_signing:
-        - keystore_reference
-      flutter: stable
+      android:
+        sdk: 34
     scripts:
-      - echo "Starting APK Build"
-      - chmod +x gradlew
+      - echo "📦 Building Debug APK..."
+      - chmod +x ./gradlew
       - ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/**/*.apk
