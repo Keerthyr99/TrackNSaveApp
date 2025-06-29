@@ -2,9 +2,7 @@ workflows:
   android-build:
     name: Build Debug APK
     max_build_duration: 15
-    environment:
-      vars:
-        JAVA_HOME: /opt/android-studio/jre
+    environment: {}
     scripts:
       - echo "📦 Starting APK Build..."
       - chmod +x ./gradlew
